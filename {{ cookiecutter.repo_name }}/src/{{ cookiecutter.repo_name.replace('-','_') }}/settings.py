@@ -11,7 +11,6 @@ logger = logging.getLogger(__name__)
 logger.info("Loaded " + __name__)
 
 import os
-from {{ cookiecutter.repo_name.replace('-','_') }}.models import *
 
 SWAGGER_INFO = {
     'title': '{{ cookiecutter.project_name }}',
@@ -29,6 +28,4 @@ SWAGGER_INFO = {
     'schemes': ['https','http'],
 }
 
-DOMAIN = {
-    'users': users
-}
+DOMAIN = {}
