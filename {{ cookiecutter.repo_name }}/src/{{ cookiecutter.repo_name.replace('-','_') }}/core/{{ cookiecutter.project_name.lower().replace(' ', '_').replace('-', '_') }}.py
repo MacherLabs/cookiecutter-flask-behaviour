@@ -11,9 +11,7 @@ class {{ cookiecutter.project_name.replace('-', '').replace('_', '').title().rep
         super({{ cookiecutter.project_name.replace('-', '').replace('_', '').title().replace(' ', '') }},  self).__init__(Config)
         self.config = Config
         
-    def run(self, data, params):
-        self.res['_id'] = str(ObjectId())
-        self.res['timestamp'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.res['producer'] = self.id
+    def run(self, data=None):
+        res = {}
 
-        return(self.res)
+        return res
