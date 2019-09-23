@@ -1,12 +1,10 @@
 #!/bin/sh
 
-echo "Running inside /app/prestart.sh, you could add migrations to this file, e.g.:"
+echo "Running inside /app/prestart.sh, you could add migrations and checks to this file."
 
-echo "
-#! /usr/bin/env bash
-
-# Let the DB start
-sleep 10;
-# Run migrations
-alembic upgrade head
-"
+if [ $? -ne 0 ]
+then
+        exit 1
+else
+        echo "Pre-start check ran successfully"
+fi
