@@ -9,8 +9,8 @@ from eazyserver.core.kafka_connector import KafkaConnector
 from .core.{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }} import {{ cookiecutter.project_name.replace('-', '').replace('_', '').title().replace(' ', '') }}
 from eazyserver.core.manager import Manager
 
+app.app_context().push()
 config = dict(app.config)
-#TODO: Get Config from cloud 
 
 kafka_client_type = config["KAFKA_CLIENT_TYPE"] 
 
@@ -31,7 +31,7 @@ signal_map = {}
 
 
 manager = Manager(
-                    behaviour={{ cookiecutter.project_name.replace('-', '').replace('_', '').title().replace(' ', '') }}(config['BEHAVIOUR_CONFIG']), 
+                    behaviour={{ cookiecutter.project_name.replace('-', '').replace('_', '').title().replace(' ', '') }}(config['BEHAVIOUR_CONFIG'],config['BEHAVIOUR_ID']), 
                     connector_type="kafka",
                     kafka_client_type=kafka_client_type,
                     kafka_client_config=kafka_client_config,
