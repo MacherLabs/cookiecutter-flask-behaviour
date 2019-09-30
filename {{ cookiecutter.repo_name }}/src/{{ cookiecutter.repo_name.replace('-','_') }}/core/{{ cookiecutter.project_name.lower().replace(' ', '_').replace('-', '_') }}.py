@@ -6,8 +6,8 @@ from bson.objectid import ObjectId
 from eazyserver.core.behaviour_base import Behaviour
 from datetime import datetime
 
-class {{ cookiecutter.project_name.replace('-', '').replace('_', '').title().replace(' ', '') }}(Behaviour, behaviour_id=None):
-    def __init__(self, Config):
+class {{ cookiecutter.project_name.replace('-', '').replace('_', '').title().replace(' ', '') }}(Behaviour):
+    def __init__(self, Config, behaviour_id=None):
         super({{ cookiecutter.project_name.replace('-', '').replace('_', '').title().replace(' ', '') }},  self).__init__(Config,behaviour_id,behaviour_type="behaviours")
         
         
