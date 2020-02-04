@@ -8,7 +8,7 @@ SETTINGS_FILE = os.path.join(BASE_DIR, 'settings.py')
 
 import logging
 import logging.config
-print "Logger config location", LOGGER_CONFIG
+print ("Logger config location", LOGGER_CONFIG)
 logging.config.fileConfig(LOGGER_CONFIG)
 logger = logging.getLogger(__name__)
 logger.info("Loaded " + __name__)
@@ -19,4 +19,4 @@ app.config['SWAGGER_HOST'] = app.config['HOST_NAME']
 
 from eazyserver.rpc.exceptions import *
 
-import core
+from .core import *

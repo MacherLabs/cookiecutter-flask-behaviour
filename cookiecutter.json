@@ -10,10 +10,10 @@
     "port": "8000",
     "host_name": "api.vedalabs.in",
     
-    "version_control": ["bitbucket"],
-    "git_username": "ashutoshdtu",
-    "full_name": "Ashutosh Mishra",
-    "email": "ashutosh@vedalabs.in",
+    "version_control": ["gitlab"],
+    "git_username": "codegenerator",
+    "full_name": "VedaLabs Bot",
+    "email": "tech@vedalabs.in",
     "git_organization": "macherlabs",
     
     "organization_name": "VedaLabs",

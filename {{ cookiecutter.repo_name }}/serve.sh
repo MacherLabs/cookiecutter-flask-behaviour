@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python -m ${APP_MODULE}
+python3 -m ${APP_MODULE}

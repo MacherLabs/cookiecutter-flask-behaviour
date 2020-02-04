@@ -7,10 +7,10 @@ README_PATH = os.path.join(APP_DIR, 'README.md')
 LICENSE_PATH = os.path.join(APP_DIR, 'LICENSE')
 REQUIREMENTS_PATH = os.path.join(APP_DIR, 'requirements.txt')
 
-print "APP_DIR: ", APP_DIR
-print "README_PATH: ", README_PATH
-print "LICENSE_PATH: ", LICENSE_PATH
-print "REQUIREMENTS_PATH: ", REQUIREMENTS_PATH
+print ("APP_DIR: ", APP_DIR)
+print ("README_PATH: ", README_PATH)
+print ("LICENSE_PATH: ", LICENSE_PATH)
+print ("REQUIREMENTS_PATH: ", REQUIREMENTS_PATH)
 
 
 with open(REQUIREMENTS_PATH) as f:
@@ -24,7 +24,7 @@ setup(
     author_email="{{ cookiecutter.email }}",
     description="{{ cookiecutter.project_short_description }}",
     long_description_content_type="text/markdown",
-    url="https://{{ cookiecutter.version_control }}.com/{{ cookiecutter.git_organization }}/{{ cookiecutter.repo_name }}",
+    url="https://{{ cookiecutter.version_control }}.com/{{ cookiecutter.git_organization }}/behaviours/behaviour-modules/{{ cookiecutter.repo_name }}",
     packages=find_packages("src", exclude=['contrib', 'docs', 'tests']),  # Required
     package_dir={"": "src"},
     py_modules=[os.path.splitext(os.path.basename(i))[0] for i in glob.glob("src/*.py")],
